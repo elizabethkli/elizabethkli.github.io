@@ -1,6 +1,33 @@
 html, body {
-    margin: 0;
-    background: beige;
+    background: linear-gradient(-45deg, #eef1fa, #cddef8, #ffffff, #e8eef4);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.center-container {
+    align-items: center;
+    justify-content: center;
+}
+
+.flex {
+    display:flex;
+}
+
+@media only screen and (max-width: 600px) {
+    
 }
 
 .section {
@@ -18,7 +45,7 @@ img {
 }
 
 .plot-holder {
-    margin-bottom: 1em;
+    margin-bottom: 2em;
 }
 
 .plot-holder .caption {
@@ -37,5 +64,31 @@ img {
 
 .content h1 {
     font-size: 3em;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-family: 'Bitter', serif;
 }
+
+.content h3 {
+    font-size: 2em;
+    text-align: center;
+    font-family: 'Bitter', serif;
+}
+
+.content p {
+    font-size: 1.5em;
+    text-align: center;
+    font-family: 'Bitter', serif;;
+}
+
+.footer {
+    background: rgb(204, 226, 249);
+  }
+
+
+.navbar-item {
+    font-size: 1em;
+    font-family: 'Bitter', serif;;
+    background-color: #ffffff;
+    color: #515151;
+    justify-items:center
+  }
