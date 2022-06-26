@@ -1,5 +1,5 @@
 html, body {
-    background: linear-gradient(-45deg, #eef1fa, #cddef8, #ffffff, #e8eef4);
+    background: linear-gradient(-45deg, #eef1fa, #e1ecfb, #ffffff, #e8eef4);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 	height: 100vh;
@@ -37,6 +37,11 @@ html, body {
 
 img {
     max-width: 100%
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    }
 }
 
 .full-size-image {
@@ -74,9 +79,16 @@ img {
     font-family: 'Bitter', serif;
 }
 
-.content p {
-    font-size: 1.5em;
+.content h4 {
+    font-size: 0.2em;
     text-align: center;
+    font-family: 'Bitter', serif;
+}
+
+
+.content p {
+    font-size: 1.4em;
+    text-align: left;
     font-family: 'Bitter', serif;;
 }
 
@@ -92,3 +104,5 @@ img {
     color: #515151;
     justify-items:center
   }
+
+
