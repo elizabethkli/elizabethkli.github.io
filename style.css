@@ -2,7 +2,6 @@ html, body {
     background: linear-gradient(-45deg, #eef1fa, #e1ecfb, #ffffff, #e8eef4);
 	animation: gradient 15s ease infinite;
 	height: fit-content;
-    }
 }
 
 @keyframes gradient {
@@ -37,13 +36,17 @@ html, body {
 }
 
 img {
-    max-width: 100%
+    max-width: 100%;
     padding: 0;
     display: block;
     margin: 0 auto;
     max-height: 100%;
-    }
 }
+
+.responsive {
+    width: 100%;
+    height: auto;
+  }
 
 .full-size-image {
     padding: 15em 0;
@@ -72,7 +75,7 @@ h2 {
     font-size: 30px;
     font-family: adelle-sans, sans-serif;
     line-height: 1.1;
-    color:#aab4c3
+    color:#aab4c3;
     margin: 0 auto;
     font-weight: 300;
     margin-top: 100px;
@@ -83,7 +86,6 @@ h2 {
     font-size: 20px;
     font-family: gambado-sans, sans-serif;
     font-weight: 800;
-    font-style: normal;
     font-style: normal;
     color: #9cadc0;
     background-color: #ffffff;
