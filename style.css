@@ -1,17 +1,17 @@
 /* Shared styles for elizabethkli.github.io
-   Palette: periwinkle blue + coral accent + charcoal. */
+   Palette: warm beige neutrals + muted dusty blue. */
 :root {
-  --bg-top: #aec3e3;
-  --bg-bottom: #e6edf7;
-  --ink: #2b2d33;
-  --muted: #5d6676;
-  --blue: #7593c4;        /* pills, accents */
-  --blue-deep: #34578f;   /* links */
-  --blue-pale: #e6edf7;
-  --accent: #e0584b;      /* coral: date pills, Industry, award */
-  --accent-soft: #fbd9d3;
-  --card: rgba(255, 255, 255, 0.8);
-  --rule: #c8d4e6;
+  --bg-top: #efe7da;
+  --bg-bottom: #faf7f1;
+  --ink: #2f2b27;
+  --muted: #6b645b;
+  --blue: #7d93ad;        /* dusty blue: Academic pills, bullets */
+  --blue-deep: #3f5876;   /* links, nav, Industry pill */
+  --blue-pale: #f0eadf;   /* facts panel */
+  --accent: #6f88a6;      /* date pills, heading underlines */
+  --accent-soft: #dfe6ee; /* link hover */
+  --card: rgba(255, 253, 249, 0.78);
+  --rule: #e2d9ca;
   --serif: "Playfair Display", Georgia, serif;
   --sans: "Poppins", "Helvetica Neue", Arial, sans-serif;
 }
@@ -49,11 +49,11 @@ h2 { font-size: 34px; margin: 0 0 20px; }
 /* Pills (dates, category labels, awards) */
 .pill { display: inline-block; font-family: var(--sans); font-weight: 600; font-size: 13px; line-height: 1; letter-spacing: .02em;
         color: #fff; background: var(--blue); border-radius: 8px; padding: 6px 10px; white-space: nowrap; vertical-align: 2px; }
-.pill.accent { background: var(--accent); color: #fff; }
+.pill.accent { background: var(--blue-deep); color: #fff; }
 
 /* ---------- Homepage ---------- */
 .hero { display: grid; grid-template-columns: 220px 1fr; gap: 40px; align-items: center; margin-bottom: 56px; }
-.hero img { width: 220px; height: 220px; object-fit: cover; border-radius: 24px; box-shadow: 0 10px 30px rgba(52, 87, 143, .18); }
+.hero img { width: 220px; height: 220px; object-fit: cover; border-radius: 24px; box-shadow: 0 10px 30px rgba(63, 52, 38, .16); }
 .hero h1 { font-size: 44px; }
 .hero p { font-size: 17px; margin: 0; }
 
@@ -74,7 +74,7 @@ h2 { font-size: 34px; margin: 0 0 20px; }
 
 /* ---------- Portfolio ---------- */
 .intro { text-align: center; color: var(--muted); max-width: 620px; margin: 0 auto 44px; font-size: 17px; }
-.page-title { text-align: center; }
+.page-title { text-align: center; margin-bottom: 36px; }
 
 .overview { display: grid; grid-template-columns: repeat(2, 1fr); grid-auto-rows: 1fr; gap: 16px; margin-bottom: 72px; }
 .card { display: block; color: var(--ink); text-decoration: none; background: var(--card); padding: 22px; border-radius: 18px;
@@ -119,3 +119,15 @@ footer { text-align: center; padding: 0 16px 48px; font-weight: 500; }
 
 /* Bigger date pills in the updates feed, like the inspiration */
 .updates li .pill { background: var(--accent); font-size: 15px; padding: 6px 11px; border-radius: 9px; vertical-align: 1px; }
+
+/* ---------- Publications ---------- */
+.pubs { margin-bottom: 48px; }
+.pubs h2 { font-size: 28px; }
+.pubs ol { list-style: none; margin: 0; padding: 0; }
+.pubs li { background: var(--card); border-radius: 18px; padding: 22px 26px; margin-bottom: 16px; }
+.pubs .pill { margin: 0 6px 10px 0; }
+.pub-title { font-family: var(--serif); font-size: 20px; line-height: 1.35; margin: 0 0 6px; }
+.pub-authors, .pub-venue { margin: 0; font-size: 15px; color: var(--muted); }
+.pub-authors strong { color: var(--ink); }
+.pubs .links { margin-top: 12px; }
+@media (max-width: 680px) { .pubs li { padding: 20px; } .pub-title { font-size: 18px; } }
