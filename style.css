@@ -1,16 +1,16 @@
 /* Shared styles for elizabethkli.github.io
-   Palette: dusty periwinkle blue + lightbulb yellow + charcoal. */
+   Palette: periwinkle blue + coral accent + charcoal. */
 :root {
-  --bg-top: #d7e2f1;
-  --bg-bottom: #f3f6fb;
+  --bg-top: #aec3e3;
+  --bg-bottom: #e6edf7;
   --ink: #2b2d33;
   --muted: #5d6676;
   --blue: #7593c4;        /* pills, accents */
   --blue-deep: #34578f;   /* links */
   --blue-pale: #e6edf7;
-  --yellow: #f2d64b;
-  --yellow-soft: #fbeea8;
-  --card: rgba(255, 255, 255, 0.72);
+  --accent: #e0584b;      /* coral: date pills, Industry, award */
+  --accent-soft: #fbd9d3;
+  --card: rgba(255, 255, 255, 0.8);
   --rule: #c8d4e6;
   --serif: "Playfair Display", Georgia, serif;
   --sans: "Poppins", "Helvetica Neue", Arial, sans-serif;
@@ -22,7 +22,7 @@ body {
   margin: 0;
   min-height: 100vh;
   color: var(--ink);
-  background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 55%, var(--bg-bottom) 100%) fixed;
+  background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 75%, var(--bg-bottom) 100%) fixed;
   background-color: var(--bg-bottom);
   font-family: var(--sans);
   font-size: 16px;
@@ -31,14 +31,14 @@ body {
 }
 
 a { color: var(--blue-deep); text-decoration: underline; text-decoration-color: var(--blue); text-underline-offset: 3px; transition: background-color .2s, color .2s; }
-a:hover { background-color: var(--yellow-soft); color: var(--ink); }
+a:hover { background-color: var(--accent-soft); color: var(--ink); }
 strong { font-weight: 600; }
 
 /* Navigation */
 .site-nav { display: flex; justify-content: center; gap: 10px; padding: 24px 16px 0; }
 .site-nav a { font-weight: 500; font-size: 15px; text-decoration: none; color: var(--ink); padding: 6px 16px; border-radius: 999px; }
 .site-nav a:hover { background: var(--card); }
-.site-nav a[aria-current="page"] { background: var(--blue); color: #fff; }
+.site-nav a[aria-current="page"] { background: var(--blue-deep); color: #fff; }
 
 main { max-width: 860px; margin: 0 auto; padding: 48px 24px 72px; }
 
@@ -49,7 +49,7 @@ h2 { font-size: 34px; margin: 0 0 20px; }
 /* Pills (dates, category labels, awards) */
 .pill { display: inline-block; font-family: var(--sans); font-weight: 600; font-size: 13px; line-height: 1; letter-spacing: .02em;
         color: #fff; background: var(--blue); border-radius: 8px; padding: 6px 10px; white-space: nowrap; vertical-align: 2px; }
-.pill.yellow { background: var(--yellow); color: var(--ink); }
+.pill.accent { background: var(--accent); color: #fff; }
 
 /* ---------- Homepage ---------- */
 .hero { display: grid; grid-template-columns: 220px 1fr; gap: 40px; align-items: center; margin-bottom: 56px; }
@@ -95,7 +95,7 @@ h2 { font-size: 34px; margin: 0 0 20px; }
 .facts dd { margin: 2px 0 0; font-size: 14px; line-height: 1.5; }
 
 .case h4 { font-family: var(--serif); font-size: 21px; font-weight: 500; margin: 28px 0 8px; }
-.case h4::after { content: ""; display: block; width: 36px; height: 4px; border-radius: 2px; background: var(--yellow); margin-top: 6px; }
+.case h4::after { content: ""; display: block; width: 36px; height: 4px; border-radius: 2px; background: var(--accent); margin-top: 6px; }
 .case p { margin: 0 0 12px; }
 .case ul { margin: 0 0 12px; padding-left: 20px; }
 .case li { margin-bottom: 8px; }
@@ -118,4 +118,4 @@ footer { text-align: center; padding: 0 16px 48px; font-weight: 500; }
 }
 
 /* Bigger date pills in the updates feed, like the inspiration */
-.updates li .pill { font-size: 15px; padding: 6px 11px; border-radius: 9px; vertical-align: 1px; }
+.updates li .pill { background: var(--accent); font-size: 15px; padding: 6px 11px; border-radius: 9px; vertical-align: 1px; }
