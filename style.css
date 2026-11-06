@@ -34,9 +34,6 @@ a { color: var(--blue-deep); text-decoration: underline; text-decoration-color: 
 a:hover { background-color: var(--yellow-soft); color: var(--ink); }
 strong { font-weight: 600; }
 
-/* Yellow highlighter behind a word, like the report's "Overview" */
-.hl { background: linear-gradient(transparent 58%, var(--yellow-soft) 58%, var(--yellow-soft) 92%, transparent 92%); padding: 0 .08em; }
-
 /* Navigation */
 .site-nav { display: flex; justify-content: center; gap: 10px; padding: 24px 16px 0; }
 .site-nav a { font-weight: 500; font-size: 15px; text-decoration: none; color: var(--ink); padding: 6px 16px; border-radius: 999px; }
