@@ -84,6 +84,10 @@ h2 { font-size: 34px; margin: 0 0 20px; }
 .btn-outline:hover { background: var(--blue-deep); border-color: var(--blue-deep); color: #fff; }
 @media (max-width: 680px) { .hero .contact-buttons { justify-content: center; } .feed { padding: 20px 18px 4px; max-height: 420px; } }
 
+.icon-btn { display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px; border-radius: 50%;
+            background: var(--blue-deep); color: #fff; text-decoration: none; transition: background-color .2s, transform .2s; }
+.icon-btn:hover { background: var(--ink); color: #fff; transform: translateY(-2px); }
+
 /* ---------- Portfolio ---------- */
 .intro { text-align: center; color: var(--muted); max-width: 620px; margin: 0 auto 44px; font-size: 17px; }
 .page-title { text-align: center; margin-bottom: 36px; }
