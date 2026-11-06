@@ -8,65 +8,9 @@
   <link rel="apple-touch-icon" href="logo.png">
   <link rel="icon" href="logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Work+Sans:wght@200;400;500&display=swap" rel="stylesheet">
-  <style>
-    :root { --link: #6E8FAD; --link-hover: #2267a4; --text: #212529; --muted: #6c757d; --rule: #e3e6ea; --tint: #f4f7fa; }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { margin: 0; background: #fff; color: var(--text); font-family: "Work Sans", sans-serif; line-height: 1.65; }
-    a { color: var(--link); text-decoration: none; font-family: "Space Mono", monospace; }
-    a:hover { color: var(--link-hover); transition: color 1s; }
-
-    .site-nav { display: flex; justify-content: center; gap: 32px; padding: 24px 16px 0; font-family: "Space Mono", monospace; }
-    .site-nav a[aria-current="page"] { color: var(--link-hover); text-decoration: underline; }
-
-    main { max-width: 820px; margin: 0 auto; padding: 48px 24px 96px; }
-    h1 { font-family: "Space Mono", monospace; font-weight: 400; font-size: 32px; margin: 0 0 12px; text-align: center; }
-    .intro { text-align: center; color: var(--muted); max-width: 620px; margin: 0 auto 48px; }
-
-    /* Overview cards */
-    .overview { display: grid; grid-template-columns: repeat(2, 1fr); grid-auto-rows: 1fr; gap: 16px; margin-bottom: 72px; }
-    .card { display: block; font-family: "Work Sans", sans-serif; color: var(--text); background: var(--tint);
-            padding: 20px; border: 1px solid transparent; }
-    .card:hover { color: var(--text); border-color: var(--link); }
-    .card .kicker { font-family: "Space Mono", monospace; font-size: 12px; color: var(--link-hover); text-transform: uppercase; letter-spacing: .06em; }
-    .card h3 { font-weight: 500; font-size: 17px; line-height: 1.35; margin: 6px 0 8px; }
-    .card p { margin: 0; font-size: 14px; color: var(--muted); }
-
-    /* Case studies */
-    .case { padding-top: 24px; margin-bottom: 80px; scroll-margin-top: 16px; }
-    .case-header { border-bottom: 1px solid #000; padding-bottom: 20px; margin-bottom: 24px; }
-    .case-header .kicker { font-family: "Space Mono", monospace; font-size: 12px; color: var(--link-hover); text-transform: uppercase; letter-spacing: .06em; margin: 0 0 6px; }
-    .case-header h2 { font-family: "Work Sans", sans-serif; font-weight: 500; font-size: 24px; line-height: 1.3; margin: 0 0 10px; }
-    .tagline { margin: 0; font-size: 17px; color: #444; }
-    .award { display: inline-block; font-family: "Space Mono", monospace; font-size: 12px; color: var(--link-hover);
-             border: 1px solid var(--link); padding: 1px 8px; margin-top: 12px; }
-
-    .facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 0 0 32px; padding: 0; }
-    .facts div { margin: 0; }
-    .facts dt { font-family: "Space Mono", monospace; font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
-    .facts dd { margin: 2px 0 0; font-size: 14px; }
-
-    .case h4 { font-family: "Space Mono", monospace; font-size: 13px; text-transform: uppercase; letter-spacing: .08em;
-               font-weight: 700; margin: 28px 0 8px; }
-    .case p { margin: 0 0 12px; }
-    .case ul { margin: 0 0 12px; padding-left: 20px; }
-    .case li { margin-bottom: 8px; }
-    .links { display: flex; flex-wrap: wrap; gap: 20px; font-size: 14px; margin-top: 20px; }
-
-    .todo { border: 1px dashed #c0392b; color: #c0392b; background: #fdf3f2; padding: 8px 12px; font-size: 14px; margin: 0 0 12px; }
-
-
-    footer { text-align: center; font-family: "Space Mono", monospace; padding: 0 16px 48px; }
-
-    @media (max-width: 640px) {
-      main { padding: 32px 16px 64px; }
-      h1 { font-size: 26px; }
-      .overview { grid-template-columns: 1fr; }
-      .facts { grid-template-columns: repeat(2, 1fr); }
-      .case-header h2 { font-size: 21px; }
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,500&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <nav class="site-nav">
@@ -75,32 +19,32 @@
   </nav>
 
   <main>
-    <h1>Portfolio</h1>
+    <h1 class="page-title"><span class="hl">Portfolio</span></h1>
     <p class="intro">Below are selected UX research projects from industry and academia, covering AI for older adults, social media, dating apps, and privacy.</p>
 
     <div class="overview">
       <a class="card" href="#ai-startup">
-        <div class="kicker">Industry</div>
+        <span class="pill yellow">Industry</span>
         <h3>Testing a startup's core assumptions about older adults and caregivers</h3>
         <p>Interviews with both groups reshaped how the team understood its users and its customer.</p>
       </a>
       <a class="card" href="#dis">
-        <div class="kicker">Academic</div>
+        <span class="pill">Academic</span>
         <h3>The cruel optimism of staying on dating apps</h3>
         <p>15 interviews explain why people keep using apps that wear them down, and what design can and can't fix.</p>
       </a>
       <a class="card" href="#bereal">
-        <div class="kicker">Academic</div>
+        <span class="pill">Academic</span>
         <h3>Designing for authenticity: a case study of BeReal</h3>
         <p>A reanalysis of 25 interviews showed how users work around a rigid design to stay "authentic" on their own terms.</p>
       </a>
       <a class="card" href="#hinge">
-        <div class="kicker">Academic</div>
+        <span class="pill">Academic</span>
         <h3>Why people overshare on Hinge</h3>
         <p>A survey of 75 users and 10 interviews showed how design and social norms push people to share more.</p>
       </a>
       <a class="card" href="#privacy-lab">
-        <div class="kicker">Academic</div>
+        <span class="pill">Academic</span>
         <h3>Why people post dating profiles on social media</h3>
         <p>A digital ethnography of Facebook, Reddit, and TikTok communities. Cited in <em>Wired</em>.</p>
       </a>
@@ -117,7 +61,7 @@
     <!-- 1. AI startup internship -->
     <article class="case" id="ai-startup">
       <header class="case-header">
-        <p class="kicker">Industry</p>
+        <span class="pill yellow">Industry</span>
         <h2>Testing a startup's core assumptions about older adults and caregivers</h2>
         <p class="tagline">An early-stage startup was building an AI virtual assistant to help older adults with day-to-day tasks. My research with older adults and caregivers helped the team sharpen who they were building for, and why.</p>
       </header>
@@ -167,7 +111,7 @@
     <!-- 2. DIS 2026 -->
     <article class="case" id="dis">
       <header class="case-header">
-        <p class="kicker">Academic</p>
+        <span class="pill">Academic</span>
         <h2>The cruel optimism of staying: why people keep using dating apps that wear them down</h2>
         <p class="tagline">Most users describe dating apps as draining, yet few actually leave. I studied how and why people stay, and found that hope and everyday coping keep users coming back.</p>
       </header>
@@ -216,10 +160,10 @@
     <!-- 3. BeReal -->
     <article class="case" id="bereal">
       <header class="case-header">
-        <p class="kicker">Academic</p>
+        <span class="pill">Academic</span>
         <h2>Designing for authenticity: what BeReal gets wrong about how people are "real" online</h2>
         <p class="tagline">BeReal tries to force authenticity through tight constraints: one random daily prompt, two minutes to post, no editing. I studied how users actually practice authenticity, and where the design works against them.</p>
-        <span class="award">Best Paper Honorable Mention, CSCW 2025</span>
+        <div class="award"><span class="pill yellow">🏆 Best Paper Honorable Mention, CSCW 2025</span></div>
       </header>
 
       <dl class="facts">
@@ -260,7 +204,7 @@
     <!-- 4. Hinge thesis -->
     <article class="case" id="hinge">
       <header class="case-header">
-        <p class="kicker">Academic</p>
+        <span class="pill">Academic</span>
         <h2>Why people overshare on Hinge: privacy and self-disclosure on dating profiles</h2>
         <p class="tagline">Hinge users know the privacy risks of their profiles, yet they still share a lot. I studied how the app's design and users' social norms push them to disclose more.</p>
       </header>
@@ -299,7 +243,7 @@
     <!-- 5. Columbia Privacy Lab -->
     <article class="case" id="privacy-lab">
       <header class="case-header">
-        <p class="kicker">Academic</p>
+        <span class="pill">Academic</span>
         <h2>Screenshot, share, and save: why people post dating profiles on social media</h2>
         <p class="tagline">People screenshot dating app profiles, their own and other people's, and post them to huge online communities. I studied why, and found privacy trade-offs that are more complicated than "sharing is bad."</p>
       </header>
