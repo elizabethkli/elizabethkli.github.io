@@ -4,42 +4,71 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Portfolio | Lizzie Li</title>
+  <meta name="description" content="UX research portfolio of Lizzie Li, HCI PhD candidate at Northwestern University.">
   <link rel="apple-touch-icon" href="logo.png">
   <link rel="icon" href="logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Work+Sans:wght@200;400;500&display=swap" rel="stylesheet">
   <style>
-    :root { --link: #6E8FAD; --link-hover: #2267a4; --text: #212529; --muted: #6c757d; --rule: #e3e6ea; }
+    :root { --link: #6E8FAD; --link-hover: #2267a4; --text: #212529; --muted: #6c757d; --rule: #e3e6ea; --tint: #f4f7fa; }
     * { box-sizing: border-box; }
-    body { margin: 0; background: #fff; color: var(--text); font-family: "Work Sans", sans-serif; line-height: 1.6; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: #fff; color: var(--text); font-family: "Work Sans", sans-serif; line-height: 1.65; }
     a { color: var(--link); text-decoration: none; font-family: "Space Mono", monospace; }
     a:hover { color: var(--link-hover); transition: color 1s; }
 
     .site-nav { display: flex; justify-content: center; gap: 32px; padding: 24px 16px 0; font-family: "Space Mono", monospace; }
     .site-nav a[aria-current="page"] { color: var(--link-hover); text-decoration: underline; }
 
-    main { max-width: 800px; margin: 0 auto; padding: 48px 24px 96px; }
-    h1 { font-family: "Space Mono", monospace; font-weight: 400; font-size: 32px; margin: 0 0 8px; text-align: center; }
-    .intro { text-align: center; color: var(--muted); margin: 0 0 56px; }
+    main { max-width: 820px; margin: 0 auto; padding: 48px 24px 96px; }
+    h1 { font-family: "Space Mono", monospace; font-weight: 400; font-size: 32px; margin: 0 0 12px; text-align: center; }
+    .intro { text-align: center; color: var(--muted); max-width: 620px; margin: 0 auto 48px; }
 
-    section { margin-bottom: 56px; }
-    h2 { font-family: "Space Mono", monospace; font-size: 13px; text-transform: uppercase; letter-spacing: .08em;
-         font-weight: 700; padding-bottom: 12px; margin: 0 0 24px; border-bottom: 1px solid #000; }
+    /* Overview cards */
+    .overview { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 72px; }
+    .card { display: block; font-family: "Work Sans", sans-serif; color: var(--text); background: var(--tint);
+            padding: 20px; border: 1px solid transparent; }
+    .card:hover { color: var(--text); border-color: var(--link); }
+    .card .kicker { font-family: "Space Mono", monospace; font-size: 12px; color: var(--link-hover); text-transform: uppercase; letter-spacing: .06em; }
+    .card h3 { font-weight: 500; font-size: 17px; line-height: 1.35; margin: 6px 0 8px; }
+    .card p { margin: 0; font-size: 14px; color: var(--muted); }
 
-    .item { padding: 0 0 28px; margin-bottom: 28px; border-bottom: 1px solid var(--rule); }
-    .item:last-child { border-bottom: none; margin-bottom: 0; }
-    .item h3 { font-family: "Work Sans", sans-serif; font-weight: 500; font-size: 18px; margin: 0 0 4px; line-height: 1.4; }
-    .meta { font-family: "Space Mono", monospace; font-size: 13px; color: var(--muted); margin: 0 0 10px; }
-    .item p { margin: 0 0 10px; }
+    /* Case studies */
+    .case { padding-top: 24px; margin-bottom: 80px; scroll-margin-top: 16px; }
+    .case-header { border-bottom: 1px solid #000; padding-bottom: 20px; margin-bottom: 24px; }
+    .case-header .kicker { font-family: "Space Mono", monospace; font-size: 12px; color: var(--link-hover); text-transform: uppercase; letter-spacing: .06em; margin: 0 0 6px; }
+    .case-header h2 { font-family: "Work Sans", sans-serif; font-weight: 500; font-size: 24px; line-height: 1.3; margin: 0 0 10px; }
+    .tagline { margin: 0; font-size: 17px; color: #444; }
     .award { display: inline-block; font-family: "Space Mono", monospace; font-size: 12px; color: var(--link-hover);
-             border: 1px solid var(--link); padding: 1px 8px; margin-bottom: 10px; }
-    .links { display: flex; flex-wrap: wrap; gap: 16px; font-size: 14px; }
+             border: 1px solid var(--link); padding: 1px 8px; margin-top: 12px; }
+
+    .facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 0 0 32px; padding: 0; }
+    .facts div { margin: 0; }
+    .facts dt { font-family: "Space Mono", monospace; font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+    .facts dd { margin: 2px 0 0; font-size: 14px; }
+
+    .case h4 { font-family: "Space Mono", monospace; font-size: 13px; text-transform: uppercase; letter-spacing: .08em;
+               font-weight: 700; margin: 28px 0 8px; }
+    .case p { margin: 0 0 12px; }
+    .case ul { margin: 0 0 12px; padding-left: 20px; }
+    .case li { margin-bottom: 8px; }
+    .insight { font-weight: 500; }
+    .links { display: flex; flex-wrap: wrap; gap: 20px; font-size: 14px; margin-top: 20px; }
+
+    .todo { border: 1px dashed #c0392b; color: #c0392b; background: #fdf3f2; padding: 8px 12px; font-size: 14px; margin: 0 0 12px; }
+
+    .recognition { border-top: 1px solid #000; padding-top: 20px; }
+    .recognition h2 { font-family: "Space Mono", monospace; font-size: 13px; text-transform: uppercase; letter-spacing: .08em; margin: 0 0 12px; }
+    .recognition ul { margin: 0; padding-left: 20px; }
 
     footer { text-align: center; font-family: "Space Mono", monospace; padding: 0 16px 48px; }
 
-    @media (max-width: 600px) {
+    @media (max-width: 640px) {
       main { padding: 32px 16px 64px; }
       h1 { font-size: 26px; }
+      .overview { grid-template-columns: 1fr; }
+      .facts { grid-template-columns: repeat(2, 1fr); }
+      .case-header h2 { font-size: 21px; }
     }
   </style>
 </head>
@@ -51,56 +80,203 @@
 
   <main>
     <h1>Portfolio</h1>
-    <p class="intro">Research and projects on authenticity, privacy, and self-presentation online.</p>
+    <p class="intro">I'm a UX researcher and HCI PhD candidate. I study how people actually behave, especially when that differs from what a product assumes, and I turn what I learn into evidence teams can act on.</p>
+
+    <div class="overview">
+      <a class="card" href="#asksoupai">
+        <div class="kicker">Industry &middot; Startup</div>
+        <h3>Testing a startup's core assumptions about older adults and caregivers</h3>
+        <p>Interviews with both groups contradicted who the team thought their customer was.</p>
+      </a>
+      <a class="card" href="#bereal">
+        <div class="kicker">Academic &middot; CSCW 2025</div>
+        <h3>Designing for authenticity: a case study of BeReal</h3>
+        <p>25 interviews showed how users work around a rigid design to stay "authentic" on their own terms.</p>
+      </a>
+      <a class="card" href="#hinge">
+        <div class="kicker">Academic &middot; MA Thesis</div>
+        <h3>Information sharing on the Hinge dating app</h3>
+        <p>What users choose to disclose on a dating profile, and why.</p>
+      </a>
+      <a class="card" href="#privacy-lab">
+        <div class="kicker">Research Fellowship</div>
+        <h3>Anti-privacy behaviors among dating app users</h3>
+        <p>A digital ethnography at the Columbia Privacy Lab.</p>
+      </a>
+    </div>
 
     <!--
-      To add an entry, copy one <article class="item"> block into the right section and edit it.
-      Remove the <span class="award"> or <div class="links"> lines if they don't apply.
+      Every case study uses the same structure:
+        kicker / title / tagline
+        facts: Role · Organization · Timeline · Methods
+        The challenge · My approach · What I found · Impact · What I learned
+      Copy an <article class="case"> block to add another one.
+      Red "To add" boxes mark gaps to fill in or delete before sending the link out.
     -->
 
-    <section>
-      <h2>Publications</h2>
+    <!-- 1. AskSOUPAI -->
+    <article class="case" id="asksoupai">
+      <header class="case-header">
+        <p class="kicker">Industry &middot; Startup</p>
+        <h2>Testing a startup's core assumptions about older adults and caregivers</h2>
+        <p class="tagline">AskSOUPAI was building an AI virtual assistant to help older adults with day-to-day tasks. My research showed that their idea of who the customer was, and what that customer wanted, didn't match what users told me.</p>
+      </header>
 
-      <article class="item">
-        <h3>From &ldquo;Time to BeReal&rdquo; to &ldquo;Let Me Post My BeFake:&rdquo; A Case of Operationalizing Authenticity Through Design</h3>
-        <p class="meta">Elizabeth Li, Annika Pinch, Justine Fisher, Darren Gergle, Jeremy Birnholtz &middot; CSCW 2025 (PACM HCI 9, 7)</p>
-        <span class="award">Best Paper Honorable Mention</span>
-        <p>Through interviews with 25 BeReal users, we find that participants experienced facets of authenticity that often didn&rsquo;t align with BeReal&rsquo;s rigid operationalization of it, and that their desire for authenticity was in tension with privacy, autonomy, and the wish to reflect back on significant moments.</p>
-        <div class="links">
-          <a href="https://dl.acm.org/doi/10.1145/3757602">ACM DL</a>
-          <a href="ACM_Submission_Final.pdf">PDF</a>
-        </div>
-      </article>
-    </section>
+      <dl class="facts">
+        <div><dt>Role</dt><dd>UX Research Intern</dd></div>
+        <div><dt>Organization</dt><dd>AskSOUPAI (early-stage startup)</dd></div>
+        <div><dt>Timeline</dt><dd>Summer 2026</dd></div>
+        <div><dt>Methods</dt><dd>In-depth interviews with older adults and caregivers; method selection</dd></div>
+      </dl>
 
-    <section>
-      <h2>Research Projects</h2>
+      <h4>The challenge</h4>
+      <p>AskSOUPAI had a rough prototype of a virtual-assistant chatbot and was moving toward an MVP. The product rested on one core assumption: <strong>caregivers are the customer</strong>. Older adults were framed as a burden on their caregivers, and caregivers would pay for a product that eased it.</p>
+      <p>Investors were interested but wanted more proof of concept. The team brought me in to work backwards and gather evidence for that assumption.</p>
 
-      <article class="item">
-        <h3>Information sharing on the Hinge dating app</h3>
-        <p class="meta">MA Thesis &middot; Human Rights Studies, Columbia University &middot; Advised by Dr. Steven Bellovin</p>
-        <p>Explored the information sharing behaviors of Hinge dating app users.</p>
-      </article>
+      <h4>My approach</h4>
+      <ul>
+        <li><strong>Talked to both sides of the relationship.</strong> I interviewed caregivers and older adults rather than only the presumed buyer, so the research could test the assumption instead of just confirming it.</li>
+        <li><strong>Chose methods that suit this population.</strong> I advised against surveys and short interviews, which tend to work poorly with older adults, and argued for longer, more relational approaches, including longitudinal methods. <!-- confirm wording --></li>
+        <li><strong>Treated participants as a vulnerable population.</strong> I reminded the team throughout that older adults need extra care in recruitment, consent, and how sessions are run.</li>
+      </ul>
 
-      <article class="item">
-        <h3>Anti-privacy behaviors among dating app users</h3>
-        <p class="meta">Research Fellow &middot; <a href="https://incite.columbia.edu/projects/columbia-privacy-lab">Columbia Privacy Lab</a></p>
-        <p>Conducted a digital ethnography to ascribe meaning to emerging anti-privacy behaviors among dating app users.</p>
-      </article>
-    </section>
+      <h4>What I found</h4>
+      <ul>
+        <li class="insight">Older adults want independence. They didn't see themselves as a problem to be managed, and they care about their autonomy as much as anyone.</li>
+        <li class="insight">Caregivers see support as love, not a burden. The "burden" framing at the heart of the pitch didn't match how caregivers described helping their family members.</li>
+        <li class="insight">Switching costs are high, especially for older adults:
+          <ul>
+            <li>Many don't want to text with a chatbot.</li>
+            <li>They want to escalate quickly to a real person.</li>
+            <li>They want dynamic, back-and-forth conversation.</li>
+            <li>Asking others for help is often a valued social connection, not friction that needs removing.</li>
+          </ul>
+        </li>
+      </ul>
 
-    <section>
-      <h2>Fellowships &amp; Awards</h2>
+      <h4>Impact</h4>
+      <p>The findings contradicted the startup's core assumptions about who the customer is and what problem the product solves. That gave the team evidence to reconsider the caregiver-as-customer framing before committing further to the MVP.</p>
+      <p class="todo">To add: what the team did with the findings (e.g., changed the target user, product direction, or investor pitch) and any concrete outcome.</p>
 
-      <article class="item">
-        <h3>Best Paper Honorable Mention</h3>
-        <p class="meta">CSCW 2025</p>
-      </article>
+      <h4>What I learned</h4>
+      <p>This internship taught me how to push back on methods and on founding assumptions respectfully, as a partner to the team rather than a blocker, while keeping user wellbeing and needs at the center. When research goes against what a team hopes to hear, how you deliver it matters as much as the findings.</p>
+    </article>
 
-      <article class="item">
-        <h3>Fellow, Columbia Entrepreneurship eLab</h3>
-        <p class="meta">Columbia University</p>
-      </article>
+    <!-- 2. BeReal -->
+    <article class="case" id="bereal">
+      <header class="case-header">
+        <p class="kicker">Academic &middot; Published research</p>
+        <h2>Designing for authenticity: what BeReal gets wrong about how people are "real" online</h2>
+        <p class="tagline">BeReal tries to force authenticity through tight constraints: one random daily prompt, two minutes to post, no editing. I studied how users actually practice authenticity, and where the design works against them.</p>
+        <span class="award">Best Paper Honorable Mention, CSCW 2025</span>
+      </header>
+
+      <dl class="facts">
+        <div><dt>Role</dt><dd>Lead researcher &amp; first author</dd></div>
+        <div><dt>Organization</dt><dd>Northwestern University (Social Media Lab &amp; CollabLab)</dd></div>
+        <div><dt>Timeline</dt><dd>Interviews Apr&ndash;Jul 2023; published Nov 2025</dd></div>
+        <div><dt>Methods</dt><dd>25 semi-structured interviews; reflexive thematic analysis</dd></div>
+      </dl>
+
+      <h4>The challenge</h4>
+      <p>Research suggests that sharing in ways that feel authentic can benefit well-being, so platforms are trying to design for it. BeReal takes the most rigid approach: it prompts everyone at a random moment and discourages late, retaken, or edited posts. But does a single, product-defined version of "authentic" match how people experience it?</p>
+
+      <h4>My approach</h4>
+      <ul>
+        <li><strong>Treated BeReal as a bounded case study,</strong> because its design makes authenticity an explicit product goal.</li>
+        <li><strong>Interviewed 25 active users</strong> aged 18&ndash;24 (BeReal's largest demographic), each 30&ndash;90 minutes, over Zoom and in person. Participants had to have posted within the past week.</li>
+        <li><strong>Analyzed the interviews with reflexive thematic analysis,</strong> with two researchers coding independently in Dedoose before building shared themes.</li>
+      </ul>
+
+      <h4>What I found</h4>
+      <ul>
+        <li class="insight">Users experience two facets of authenticity: posting impromptu, in the moment, and representing themselves honestly. The two often conflict, and BeReal's design only supports the first.</li>
+        <li class="insight">Authenticity competes with other values. Users wanted <strong>privacy</strong> (the prompt might arrive at work or in class), <strong>autonomy</strong> over what they share, and the ability to <strong>reminisce</strong> about meaningful moments.</li>
+        <li class="insight">Users work around the constraints: posting late, changing the scene, or curating anyway, even though they know it goes against the app's intent.</li>
+      </ul>
+
+      <h4>Impact</h4>
+      <p>The paper won a Best Paper Honorable Mention at CSCW 2025. It proposes an <strong>authenticity design space</strong> (how much control users have over when content is captured, what is shared, and how it's modified) and gives concrete design recommendations. For example, BeReal could send several prompts a day and let users choose one, keeping spontaneity while restoring some choice.</p>
+
+      <h4>What I learned</h4>
+      <p>Constraining users isn't the same as supporting them. Designing for a value like authenticity means understanding the contexts people live in (school, work, relationships) and giving them flexibility with some structure, rather than one fixed definition.</p>
+
+      <div class="links">
+        <a href="https://dl.acm.org/doi/10.1145/3757602">Read the paper (ACM DL) &rarr;</a>
+        <a href="ACM_Submission_Final.pdf">PDF &rarr;</a>
+      </div>
+    </article>
+
+    <!-- 3. Hinge thesis -->
+    <article class="case" id="hinge">
+      <header class="case-header">
+        <p class="kicker">Academic &middot; MA Thesis</p>
+        <h2>Information sharing on the Hinge dating app</h2>
+        <p class="tagline">How Hinge users decide what personal information to share with potential matches.</p>
+      </header>
+
+      <dl class="facts">
+        <div><dt>Role</dt><dd>Lead researcher (MA thesis)</dd></div>
+        <div><dt>Organization</dt><dd>Columbia University, Human Rights Studies</dd></div>
+        <div><dt>Timeline</dt><dd class="todo">Year?</dd></div>
+        <div><dt>Methods</dt><dd class="todo">e.g., interviews, n=?</dd></div>
+      </dl>
+
+      <h4>The challenge</h4>
+      <p>Dating apps ask people to share personal information with strangers so they can find a match. My thesis, advised by Dr. Steven Bellovin, examined the information sharing behaviors of Hinge users.</p>
+      <p class="todo">To add: the research question and why it mattered (e.g., privacy risk vs. the pressure to share).</p>
+
+      <h4>My approach</h4>
+      <p class="todo">To add: methods, participants, and how you analyzed the data.</p>
+
+      <h4>What I found</h4>
+      <p class="todo">To add: 2&ndash;3 key findings, one line each.</p>
+
+      <h4>Impact</h4>
+      <p class="todo">To add: design or policy implications, or where the work led (e.g., the Privacy Lab project).</p>
+
+      <h4>What I learned</h4>
+      <p class="todo">To add: 1&ndash;2 sentences of reflection.</p>
+    </article>
+
+    <!-- 4. Columbia Privacy Lab -->
+    <article class="case" id="privacy-lab">
+      <header class="case-header">
+        <p class="kicker">Research Fellowship</p>
+        <h2>Anti-privacy behaviors among dating app users</h2>
+        <p class="tagline">Why some dating app users deliberately give up privacy, and what that means to them.</p>
+      </header>
+
+      <dl class="facts">
+        <div><dt>Role</dt><dd>Research Fellow</dd></div>
+        <div><dt>Organization</dt><dd><a href="https://incite.columbia.edu/projects/columbia-privacy-lab">Columbia Privacy Lab</a></dd></div>
+        <div><dt>Timeline</dt><dd class="todo">Year?</dd></div>
+        <div><dt>Methods</dt><dd>Digital ethnography</dd></div>
+      </dl>
+
+      <h4>The challenge</h4>
+      <p>Privacy research often assumes people want to protect their information, but some dating app users were adopting emerging behaviors that ran the other way. I set out to understand what those anti-privacy behaviors meant to the people doing them.</p>
+
+      <h4>My approach</h4>
+      <p>I conducted a digital ethnography of dating app users.</p>
+      <p class="todo">To add: where you observed (platforms, communities), for how long, and what you collected.</p>
+
+      <h4>What I found</h4>
+      <p class="todo">To add: 2&ndash;3 key findings, one line each.</p>
+
+      <h4>Impact</h4>
+      <p class="todo">To add: who used the findings or what they informed.</p>
+
+      <h4>What I learned</h4>
+      <p class="todo">To add: 1&ndash;2 sentences of reflection.</p>
+    </article>
+
+    <section class="recognition">
+      <h2>Recognition</h2>
+      <ul>
+        <li>Best Paper Honorable Mention, CSCW 2025</li>
+        <li>Fellow, Columbia Entrepreneurship eLab</li>
+      </ul>
     </section>
   </main>
 
