@@ -32,6 +32,7 @@
     .card .kicker { font-family: "Space Mono", monospace; font-size: 12px; color: var(--link-hover); text-transform: uppercase; letter-spacing: .06em; }
     .card h3 { font-weight: 500; font-size: 17px; line-height: 1.35; margin: 6px 0 8px; }
     .card p { margin: 0; font-size: 14px; color: var(--muted); }
+    .card.featured { grid-column: 1 / -1; }
 
     /* Case studies */
     .case { padding-top: 24px; margin-bottom: 80px; scroll-margin-top: 16px; }
@@ -83,10 +84,15 @@
     <p class="intro">I'm a UX researcher and HCI PhD candidate. I study how people actually behave, especially when that differs from what a product assumes, and I turn what I learn into evidence teams can act on.</p>
 
     <div class="overview">
-      <a class="card" href="#asksoupai">
+      <a class="card featured" href="#ai-startup">
         <div class="kicker">Industry &middot; Startup</div>
         <h3>Testing a startup's core assumptions about older adults and caregivers</h3>
-        <p>Interviews with both groups contradicted who the team thought their customer was.</p>
+        <p>Interviews with both groups reshaped how the team understood its users and its customer.</p>
+      </a>
+      <a class="card" href="#dis">
+        <div class="kicker">Academic &middot; DIS 2026</div>
+        <h3>The cruel optimism of staying on dating apps</h3>
+        <p>15 interviews explain why people keep using apps that wear them down, and what design can and can't fix.</p>
       </a>
       <a class="card" href="#bereal">
         <div class="kicker">Academic &middot; CSCW 2025</div>
@@ -111,26 +117,25 @@
         facts: Role · Organization · Timeline · Methods
         The challenge · My approach · What I found · Impact · What I learned
       Copy an <article class="case"> block to add another one.
-      Red "To add" boxes mark gaps to fill in or delete before sending the link out.
     -->
 
-    <!-- 1. AskSOUPAI -->
-    <article class="case" id="asksoupai">
+    <!-- 1. AI startup internship -->
+    <article class="case" id="ai-startup">
       <header class="case-header">
         <p class="kicker">Industry &middot; Startup</p>
         <h2>Testing a startup's core assumptions about older adults and caregivers</h2>
-        <p class="tagline">AskSOUPAI was building an AI virtual assistant to help older adults with day-to-day tasks. My research showed that their idea of who the customer was, and what that customer wanted, didn't match what users told me.</p>
+        <p class="tagline">An early-stage startup was building an AI virtual assistant to help older adults with day-to-day tasks. My research with older adults and caregivers helped the team sharpen who they were building for, and why.</p>
       </header>
 
       <dl class="facts">
         <div><dt>Role</dt><dd>UX Research Intern</dd></div>
-        <div><dt>Organization</dt><dd>AskSOUPAI (early-stage startup)</dd></div>
+        <div><dt>Organization</dt><dd>Early-stage AI startup</dd></div>
         <div><dt>Timeline</dt><dd>Summer 2026</dd></div>
         <div><dt>Methods</dt><dd>In-depth interviews with older adults and caregivers; method selection</dd></div>
       </dl>
 
       <h4>The challenge</h4>
-      <p>AskSOUPAI had a rough prototype of a virtual-assistant chatbot and was moving toward an MVP. The product rested on one core assumption: <strong>caregivers are the customer</strong>. Older adults were framed as a burden on their caregivers, and caregivers would pay for a product that eased it.</p>
+      <p>The startup had a rough prototype of a virtual-assistant chatbot and was moving toward an MVP. The product rested on one core assumption: <strong>caregivers are the customer</strong>. Older adults were framed as a burden on their caregivers, and caregivers would pay for a product that eased it.</p>
       <p>Investors were interested but wanted more proof of concept. The team brought me in to work backwards and gather evidence for that assumption.</p>
 
       <h4>My approach</h4>
@@ -155,13 +160,62 @@
       </ul>
 
       <h4>Impact</h4>
-      <p>The findings contradicted the startup's core assumptions about who the customer is and what problem the product solves. As a result, <strong>the team changed the product's direction and its investor pitch</strong>, reframing both around independence rather than burden.</p>
+      <p>The findings challenged the team's early assumptions about who the customer is and what problem the product solves. As a result, <strong>the team changed the product's direction and its investor pitch</strong>, reframing both around independence rather than burden.</p>
 
       <h4>What I learned</h4>
       <p>This internship taught me how to push back on methods and on founding assumptions respectfully, as a partner to the team rather than a blocker, while keeping user wellbeing and needs at the center. When research goes against what a team hopes to hear, how you deliver it matters as much as the findings.</p>
     </article>
 
-    <!-- 2. BeReal -->
+    <!-- 2. DIS 2026 -->
+    <article class="case" id="dis">
+      <header class="case-header">
+        <p class="kicker">Academic &middot; Published research</p>
+        <h2>The cruel optimism of staying: why people keep using dating apps that wear them down</h2>
+        <p class="tagline">Most users describe dating apps as draining, yet few actually leave. I studied how and why people stay, and found that hope and everyday coping keep users coming back.</p>
+      </header>
+
+      <dl class="facts">
+        <div><dt>Role</dt><dd>Lead researcher &amp; first author</dd></div>
+        <div><dt>Organization</dt><dd>Northwestern University, with Supraja Sudarsan, Harper Barnowski &amp; Calvin A. Liang</dd></div>
+        <div><dt>Timeline</dt><dd>Interviews Jun&ndash;Aug 2025; presented at DIS Jun 2026</dd></div>
+        <div><dt>Methods</dt><dd>15 semi-structured interviews; reflexive thematic analysis</dd></div>
+      </dl>
+
+      <h4>The challenge</h4>
+      <p>Research and popular media increasingly link dating apps to burnout, anxiety, and poorer well-being, yet user retention stays steady. That's a contradiction worth understanding: <strong>if dating apps feel so depleting, why do people keep using them?</strong> We asked how users' feelings shape their decisions to stay, and how they manage those feelings over time.</p>
+
+      <h4>My approach</h4>
+      <ul>
+        <li><strong>Interviewed 15 active dating app users</strong> aged 18&ndash;44, each for 55&ndash;75 minutes, and recruited until no new themes emerged.</li>
+        <li><strong>Let participants name their own feelings and strategies,</strong> with prompts like "How do you generally feel after using dating apps?" and "What made you come back?"</li>
+        <li><strong>Analyzed the interviews with reflexive thematic analysis,</strong> with three researchers coding independently in Dedoose. We used a feelings wheel to give the team a shared language for emotions without restricting what counted as one.</li>
+      </ul>
+
+      <h4>What I found</h4>
+      <ul>
+        <li class="insight">Staying runs on a cycle of emotional ups and downs. Recurring frustration, anxiety, and fatigue push people toward leaving, but brief moments of validation and, above all, hope pull them back in.</li>
+        <li class="insight">People build their own ways to keep going: emotionally detaching from bad outcomes, limiting how much they use the apps (for example by pausing their profile), and leaning on friends for support.</li>
+        <li class="insight">Those coping strategies make the apps bearable, which keeps people engaged even when the experience stays hard.</li>
+      </ul>
+
+      <h4>Impact</h4>
+      <p>The paper was published and presented at DIS 2026 in Singapore. It gives platforms concrete design directions, including:</p>
+      <ul>
+        <li>focusing users on fewer, more promising connections;</li>
+        <li>emotional check-in tools so users can notice patterns in how the apps make them feel;</li>
+        <li>better support for intentional breaks.</li>
+      </ul>
+      <p>It also argues that design alone can't fix the deeper social and structural reasons people stay.</p>
+
+      <h4>What I learned</h4>
+      <p>Behavior that looks irrational from the outside, like staying on an app that makes you unhappy, makes sense once you understand people's feelings and the strategies they've built. It also taught me to be honest about what design can and can't solve.</p>
+
+      <div class="links">
+        <a href="https://doi.org/10.1145/3800645.3812909">Read the paper (ACM DL) &rarr;</a>
+      </div>
+    </article>
+
+    <!-- 3. BeReal -->
     <article class="case" id="bereal">
       <header class="case-header">
         <p class="kicker">Academic &middot; Published research</p>
@@ -206,7 +260,7 @@
       </div>
     </article>
 
-    <!-- 3. Hinge thesis -->
+    <!-- 4. Hinge thesis -->
     <article class="case" id="hinge">
       <header class="case-header">
         <p class="kicker">Academic &middot; MA Thesis</p>
@@ -245,7 +299,7 @@
       <p>Combining methods paid off. The walkthrough showed what the product encourages, while the surveys and interviews showed why people go along with it. Studying both the design and its users together gave a fuller picture than either could alone.</p>
     </article>
 
-    <!-- 4. Columbia Privacy Lab -->
+    <!-- 5. Columbia Privacy Lab -->
     <article class="case" id="privacy-lab">
       <header class="case-header">
         <p class="kicker">Research Fellowship</p>
